@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
+    <Authors>HK</Authors>
+    <Company>DeliVeggie</Company>
+    <Description>Shared models that can be used across DeliVeggie platform</Description>
+    <PackageId>DeliVeggie.Models</PackageId>
+    <PackageProjectUrl>https://project-url.com</PackageProjectUrl>
+    <PackageLicenseUrl>https://license-url.com</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/your-username/your-repository</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="README.txt" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  
+</Project>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliVeggie.Models", "DeliVeggie.Models\DeliVeggie.Models.csproj", "{AA568CE2-04CC-45FE-A173-48281084424D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA568CE2-04CC-45FE-A173-48281084424D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA568CE2-04CC-45FE-A173-48281084424D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA568CE2-04CC-45FE-A173-48281084424D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA568CE2-04CC-45FE-A173-48281084424D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1B31787-5CD3-4725-A656-819681CD68F5}
+	EndGlobalSection
+EndGlobal

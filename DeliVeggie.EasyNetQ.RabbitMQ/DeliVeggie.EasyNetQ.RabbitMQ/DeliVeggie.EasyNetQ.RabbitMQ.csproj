@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <Version>1.0.0</Version>
+    <Authors>HK</Authors>
+    <Company>DeliVeggie</Company>
+    <Description>EasyNetQ implementation on top of rabbitMq.Currently this package supports only request/response mode.</Description>
+    <PackageId>DeliVeggie.EasyNetQ.RabbitMQ</PackageId>
+    <PackageProjectUrl>https://project-url.com</PackageProjectUrl>
+    <PackageLicenseUrl>https://license-url.com</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/your-username/your-repository</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DeliVeggie.Models" Version="1.0.0" />
+    <PackageReference Include="EasyNetQ" Version="7.4.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="README.txt" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
