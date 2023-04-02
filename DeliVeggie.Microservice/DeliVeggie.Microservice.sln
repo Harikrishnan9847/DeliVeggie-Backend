@@ -21,7 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeliVeggie.Microservice.Dat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.Models", "04.Models", "{E1FFF5B5-BBB6-422F-8073-1343CF372CA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliVeggie.Microservice.Models", "DeliVeggie.Microservice.Models\DeliVeggie.Microservice.Models.csproj", "{51C44D31-D5C7-4BC3-8F91-2DDA122D2AC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeliVeggie.Microservice.Models", "DeliVeggie.Microservice.Models\DeliVeggie.Microservice.Models.csproj", "{51C44D31-D5C7-4BC3-8F91-2DDA122D2AC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Tests", "00.Tests", "{F545F077-B24E-42F9-B045-D84FA4B9E101}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliVeggie.Microservice.Domain.Tests", "DeliVeggie.Microservice.Domain.Tests\DeliVeggie.Microservice.Domain.Tests.csproj", "{AEA0978F-D834-4C6C-A0F9-51222B7BE327}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,10 @@ Global
 		{51C44D31-D5C7-4BC3-8F91-2DDA122D2AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51C44D31-D5C7-4BC3-8F91-2DDA122D2AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51C44D31-D5C7-4BC3-8F91-2DDA122D2AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEA0978F-D834-4C6C-A0F9-51222B7BE327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA0978F-D834-4C6C-A0F9-51222B7BE327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA0978F-D834-4C6C-A0F9-51222B7BE327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA0978F-D834-4C6C-A0F9-51222B7BE327}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +72,7 @@ Global
 		{DC94F05F-05FE-4925-9423-CD5C87863D19} = {6E781250-6FAE-483F-AC10-C614768F8417}
 		{B784D79B-22C6-4A19-8AD5-2491678D3AF3} = {6E781250-6FAE-483F-AC10-C614768F8417}
 		{51C44D31-D5C7-4BC3-8F91-2DDA122D2AC9} = {E1FFF5B5-BBB6-422F-8073-1343CF372CA9}
+		{AEA0978F-D834-4C6C-A0F9-51222B7BE327} = {F545F077-B24E-42F9-B045-D84FA4B9E101}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E4C2ECAF-0F2F-42C9-9EE3-6E754CFA713B}

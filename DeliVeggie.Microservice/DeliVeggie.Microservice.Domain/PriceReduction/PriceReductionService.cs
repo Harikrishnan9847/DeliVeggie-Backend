@@ -14,7 +14,7 @@ namespace DeliVeggie.Microservice.Domain.PriceReduction
     {
         #region PRIVATE PROPERTIES
         private readonly IPriceReductionRepository _priceReductionRepository;
-        private readonly int _hours = 0;
+        private readonly int _hours = 12;
         private IMemoryCache _cache;
         #endregion
 
@@ -25,10 +25,10 @@ namespace DeliVeggie.Microservice.Domain.PriceReduction
         {
             _priceReductionRepository = priceReductionRepository;
             _cache = cache;
-            _hours = int.Parse(configuration.GetSection("CacheSettings")
+            int.TryParse((configuration.GetSection("CacheSettings")
                 .GetChildren()
                 .FirstOrDefault(config => config.Key == "Hours")
-                .Value);
+                .Value), out _hours);
         }
         #endregion
 
