@@ -1,0 +1,102 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deliveggie-microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deliveggie-microservice
+  template:
+    metadata:
+      labels:
+        app: deliveggie-microservice
+    spec:
+      containers:
+      - name: deliveggie-microservice
+        image: <DOCKER_REGISTRY>/deliveggie-microservice
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deliveggie-gateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deliveggie-gateway
+  template:
+    metadata:
+      labels:
+        app: deliveggie-gateway
+    spec:
+      containers:
+      - name: deliveggie-gateway
+        image: <DOCKER_REGISTRY>/deliveggie-gateway
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deliveggie-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deliveggie-ui
+  template:
+    metadata:
+      labels:
+        app: deliveggie-ui
+    spec:
+      containers:
+      - name: deliveggie-ui
+        image: <DOCKER_REGISTRY>/deliveggie-ui
+        ports:
+        - containerPort: 8001
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: deliveggie-microservice
+spec:
+  type: ClusterIP
+  selector:
+    app: deliveggie-microservice
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: deliveggie-gateway
+spec:
+  type: NodePort
+  selector:
+    app: deliveggie-gateway
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+  - name: https
+    port: 443
+    targetPort: 443
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: deliveggie-ui
+spec:
+  type: NodePort
+  selector:
+    app: deliveggie-ui
+  ports:
+  - name: http
+    port: 8001
+    targetPort: 8001
