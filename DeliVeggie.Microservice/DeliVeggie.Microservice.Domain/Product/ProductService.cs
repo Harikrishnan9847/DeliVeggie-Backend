@@ -86,7 +86,7 @@ namespace DeliVeggie.Microservice.Domain.Product
         #region PRIVATE METHODS
         private void ApplyReduction(ref ProductDetailsResponse productDetails)
         {
-            int currentDay = (int)DateTime.Now.DayOfWeek;
+            int currentDay = GetCurrentDay();
 
             var reduction = Task.Run(async () =>
             {
@@ -95,6 +95,13 @@ namespace DeliVeggie.Microservice.Domain.Product
             }).GetAwaiter().GetResult();
 
             productDetails.PriceWithReduction -= reduction;
+        }
+
+        private int GetCurrentDay()
+        {
+            int currentDay = (int)DateTime.Now.DayOfWeek;
+            currentDay = currentDay == 0 ? 7 : currentDay;
+            return currentDay;
         }
         #endregion
     }

@@ -1,0 +1,48 @@
+version: '3.4'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    hostname: rabbit
+    container_name: 'rabbitmq'
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+  deliveggiedb:
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb-data:/data/db
+  deliveggie.microservice:
+    image: ${DOCKER_REGISTRY-}deliveggie-microservice
+    build:
+      context: .
+      dockerfile: DeliVeggie.Microservice/Dockerfile
+  deliveggie.gateway:
+    image: ${DOCKER_REGISTRY-}deliveggie-gateway
+    build:
+      context: ../DeliVeggie.Gateway
+      dockerfile: DeliVeggie.API/Dockerfile
+    ports:
+      - "44350:80"
+      - "44360:443"
+  deliveggie.ui:
+    image: ${DOCKER_REGISTRY-}deliveggie-ui
+    build:
+      context: ../DeliVeggie-Frontend
+      dockerfile: DeliVeggie.UI/Dockerfile
+    ports:
+      - "8001:8001"
+networks:
+  default:
+    name: localhost-bridge-network
+    external: true
+
+volumes:
+  mongodb-data:
+    name: mongodb-data
+    external: true
