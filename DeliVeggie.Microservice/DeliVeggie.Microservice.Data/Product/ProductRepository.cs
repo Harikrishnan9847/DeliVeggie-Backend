@@ -108,35 +108,35 @@ namespace DeliVeggie.Microservice.Data.Product
                 {
                     Id = ObjectId.GenerateNewId(),
                     Name = "Spinach Bunch",
-                    EntryDate = DateTime.Parse("26-12-2020"),
+                    EntryDate = DateTime.Parse("10-03-2020"),
                     Price = 1.25
                 },
                 new ProductEntity
                 {
                     Id = ObjectId.GenerateNewId(),
                     Name = "Red Bell Pepper",
-                    EntryDate = DateTime.Parse("15-06-2020"),
+                    EntryDate = DateTime.Parse("01-06-2020"),
                     Price = 0.99
                 },
                 new ProductEntity
                 {
                     Id = ObjectId.GenerateNewId(),
                     Name = "Organic Cucumber",
-                    EntryDate = DateTime.Parse("03-03-2021"),
+                    EntryDate = DateTime.Parse("09-07-2021"),
                     Price = 2.50
                 },
                 new ProductEntity
                 {
                     Id = ObjectId.GenerateNewId(),
                     Name = "Zucchini Squash",
-                    EntryDate = DateTime.Parse("17-06-2021"),
+                    EntryDate = DateTime.Parse("02-06-2021"),
                     Price = 0.75
                 },
                 new ProductEntity
                 {
                     Id = ObjectId.GenerateNewId(),
                     Name = "Yellow Onion",
-                    EntryDate = DateTime.Parse("26-04-2022"),
+                    EntryDate = DateTime.Parse("03-04-2022"),
                     Price = 0.69
                 },
                 new ProductEntity

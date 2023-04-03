@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: deliveggie-microservice
-        image: <DOCKER_REGISTRY>/deliveggie-microservice
+        image: harikrishnan1996/deliveggie-microservice:v2.0
         ports:
         - containerPort: 80
 ---
@@ -34,10 +34,17 @@ spec:
     spec:
       containers:
       - name: deliveggie-gateway
-        image: <DOCKER_REGISTRY>/deliveggie-gateway
+        image: harikrishnan1996/deliveggie-gateway:v1.0
         ports:
         - containerPort: 80
         - containerPort: 443
+        ports:
+        - name: http
+          containerPort: 80
+          hostPort: 44350
+        - name: https
+          containerPort: 443
+          hostPort: 44360
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -55,7 +62,7 @@ spec:
     spec:
       containers:
       - name: deliveggie-ui
-        image: <DOCKER_REGISTRY>/deliveggie-ui
+        image: harikrishnan1996/deliveggie-ui:v1.0
         ports:
         - containerPort: 8001
 ---
